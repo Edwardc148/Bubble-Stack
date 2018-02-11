@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bubble Stack</title>
+
+    <style>
+      canvas { background-image:url('sunset.jpg'); }
+    </style>
+  </head>
+  <body>
+    <canvas id="bubbleCanvas" width="550" height="700"></canvas>
+
+    <script>
+
+// Variable Declarations
+      let canvas = document.getElementById("bubbleCanvas");
+      let ctx = canvas.getContext("2d");
+
+      let shootBubble = false;
+      let aimLeft = false;
+      let aimRight = false;
+
+      let pointerBase = canvas.width/2;
+      let pointerLength = 30;
+
+      document.addEventListener("keydown", keyDownHandler);
+      document.addEventListener("keyup", keyUpHandler);
+
+// Function Declarations
+
+      function keyDownHandler(event) {
+        if (event.keyCode === 32) {
+          shootBubble = true;
+        } else if (event.keyCode === 37) {
+          aimLeft = true;
+        } else if (event.keyCode === 39) {
+          aimRight = true;
+        }
+      }
+
+      function keyUpHandler(event) {
+        if (event.keyCode === 32) {
+          shootBubble = false;
+        } else if (event.keyCode === 37) {
+          aimLeft = false;
+        } else if (event.keyCode === 39) {
+          aimRight = false;
+        }
+      }
+
+      // function pointer() {
+      //   ctx.beginPath();
+      // }
+
+      var c5=document.getElementById("bubbleCanvas");
+      var ctx5=c5.getContext('2d');
+      ctx5.strokeStyle='rgb(50,50,0)';
+      ctx5.fillStyle='rgb(50,50,0)';
+      ctx5.lineWidth=2;
+      // draw the line for the shaft
+      ctx5.moveTo(10,30);
+      ctx5.lineTo(290,30);
+      // draw the top of the arrow head
+      ctx5.lineTo(285,28);
+      // draw the curve of the back
+      ctx5.arcTo(289,30, 285,32,8);
+      // draw the bottom of the arrow head
+      ctx5.lineTo(290,30);
+      // and make it draw
+      ctx5.stroke();
+      ctx5.fill();
+
+
+
+    </script>
+  </body>
+</html>
