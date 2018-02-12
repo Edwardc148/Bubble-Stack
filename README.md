@@ -10,6 +10,16 @@ Users will be able to shoot bubbles at varying angles in order to match bubbles 
 
 Background music will be on continuous loop using an imported Howler.js
 
+### MVP
+
+- [ ] Fully functional game with appropriate pattern matching
+- [ ] Audio background music with the ability to mute
+- [ ] Proper styling and bug free playability.
+- [ ] Score to keep track
+
+BONUS:
+- [ ] Keep track of previous scores (High scores)
+
 ### Wireframes
 
 ![Bubble Stack](https://github.com/Edwardc148/Markups/blob/master/Bubble%20Stack%20Wireframe.png)

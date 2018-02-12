@@ -4,108 +4,12 @@
     <meta charset="utf-8">
     <title>Bubble Stack</title>
 
-    <style>
-      canvas { background-image:url('sunset.jpg'); }
-    </style>
+    <script type="application/javascript" src="lib/bundle.js"></script>
+    <link rel="stylesheet" href="./lib/reset.css">
   </head>
   <body>
-    <canvas id="bubbleCanvas" width="550" height="700"></canvas>
+    <canvas class="bubbleCanvas" id="bubbleCanvas" ></canvas>
 
-    <script>
 
-// Variable Declarations
-
-      let canvas = document.getElementById("bubbleCanvas");
-      let ctx = canvas.getContext("2d");
-
-      let shootBubble = false;
-      let aimLeft = false;
-      let aimRight = false;
-
-      let base = canvas.width/2;
-      let height = canvas.height;
-
-      ctx.translate(base, height);
-
-      let arrowHeight = 80;
-      let degrees = 0;
-
-      let x = 0;
-      let y = 0;
-
-      document.addEventListener("keydown", keyDownHandler);
-      document.addEventListener("keyup", keyUpHandler);
-
-// Function Declarations
-
-      function keyDownHandler(event) {
-        if (event.keyCode === 32) {
-          shootBubble = true;
-        } else if (event.keyCode === 37) {
-          aimLeft = true;
-        } else if (event.keyCode === 39) {
-          aimRight = true;
-        }
-      }
-
-      function keyUpHandler(event) {
-        if (event.keyCode === 32) {
-          shootBubble = false;
-        } else if (event.keyCode === 37) {
-          aimLeft = false;
-        } else if (event.keyCode === 39) {
-          aimRight = false;
-        }
-      }
-
-      function drawArrow() {
-        ctx.beginPath();
-        ctx.moveTo(0, 0);
-        ctx.lineTo(0, -80);
-        ctx.stroke();
-        ctx.closePath();
-      }
-
-      function draw() {
-
-        canvas = document.getElementById("bubbleCanvas");
-        ctx = canvas.getContext("2d");
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // ctx.beginPath();
-
-        if (aimLeft) {
-          degrees -= 1;
-          console.log(degrees);
-          ctx.rotate((Math.PI/180)*degrees);
-          degrees = 0;
-        } else if (aimRight) {
-          degrees += 1;
-          console.log(degrees);
-          ctx.rotate((Math.PI/180)*degrees);
-          degrees = 0;
-        }
-        // ctx.moveTo(0, 0);
-        // ctx.lineTo(0, -80);
-        // ctx.stroke();
-        // ctx.closePath();
-        // ctx.clearRect(0, 0, canvas.width, canvas.heigth);
-        drawArrow();
-      }
-
-      setInterval(draw, 20);
-
-      function clear() {
-        draw();
-        reset();
-      }
-
-      function reset() {
-        canvas = document.getElementById("bubbleCanvas");
-        ctx = canvas.getContext("2d");
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-      }
-
-   </script>
   </body>
 </html>

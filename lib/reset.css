@@ -1,0 +1,5 @@
+#bubbleCanvas {
+  background-image:url('../sunset.jpg');
+  display: flex;
+  margin: auto;
+}

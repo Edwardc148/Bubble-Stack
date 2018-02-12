@@ -1,0 +1,24 @@
+{
+  "name": "bubblestack",
+  "version": "1.0.0",
+  "description": "### Overview",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edwardc148/JavaScript-Project---Bubble-Stack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edwardc148/JavaScript-Project---Bubble-Stack/issues"
+  },
+  "homepage": "https://github.com/Edwardc148/JavaScript-Project---Bubble-Stack#readme"
+}
