@@ -51,6 +51,10 @@ Day 3
 Day 4
 - [ ] Heavy CSS day to make everything appropriate and presentable
 
+### Difficulties
+
+The most difficult portion of this project is going to be pattern matching as well as the ability to randomly generate the colors of the bubbles based on what is currently present on the play board screen.  
+
 ### Bonus features
 
 - Multiplayer
