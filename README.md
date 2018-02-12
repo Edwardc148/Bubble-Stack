@@ -28,11 +28,12 @@ Over the weekend:
 
 Day 1
 - [ ] Get the basic functionality of the game running
-- [ ] Webpack?
+- [ ] Webpack
+- [ ] Build bubble.js (which will hold the properties for the bubbles)
 
 Day 2
 - [ ] Setup Howler
-- [ ] Audio collisions
+- [ ] Bubble collisions
 
 Day 3
 - [ ] Setup backend using node

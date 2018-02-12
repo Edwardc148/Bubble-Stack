@@ -14,6 +14,7 @@
     <script>
 
 // Variable Declarations
+
       let canvas = document.getElementById("bubbleCanvas");
       let ctx = canvas.getContext("2d");
 
@@ -21,8 +22,16 @@
       let aimLeft = false;
       let aimRight = false;
 
-      let pointerBase = canvas.width/2;
-      let pointerLength = 30;
+      let base = canvas.width/2;
+      let height = canvas.height;
+
+      ctx.translate(base, height);
+
+      let arrowHeight = 80;
+      let degrees = 0;
+
+      let x = 0;
+      let y = 0;
 
       document.addEventListener("keydown", keyDownHandler);
       document.addEventListener("keyup", keyUpHandler);
@@ -49,30 +58,54 @@
         }
       }
 
-      // function pointer() {
-      //   ctx.beginPath();
-      // }
+      function drawArrow() {
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, -80);
+        ctx.stroke();
+        ctx.closePath();
+      }
 
-      var c5=document.getElementById("bubbleCanvas");
-      var ctx5=c5.getContext('2d');
-      ctx5.strokeStyle='rgb(50,50,0)';
-      ctx5.fillStyle='rgb(50,50,0)';
-      ctx5.lineWidth=2;
-      // draw the line for the shaft
-      ctx5.moveTo(10,30);
-      ctx5.lineTo(290,30);
-      // draw the top of the arrow head
-      ctx5.lineTo(285,28);
-      // draw the curve of the back
-      ctx5.arcTo(289,30, 285,32,8);
-      // draw the bottom of the arrow head
-      ctx5.lineTo(290,30);
-      // and make it draw
-      ctx5.stroke();
-      ctx5.fill();
+      function draw() {
 
+        canvas = document.getElementById("bubbleCanvas");
+        ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+        // ctx.beginPath();
 
-    </script>
+        if (aimLeft) {
+          degrees -= 1;
+          console.log(degrees);
+          ctx.rotate((Math.PI/180)*degrees);
+          degrees = 0;
+        } else if (aimRight) {
+          degrees += 1;
+          console.log(degrees);
+          ctx.rotate((Math.PI/180)*degrees);
+          degrees = 0;
+        }
+        // ctx.moveTo(0, 0);
+        // ctx.lineTo(0, -80);
+        // ctx.stroke();
+        // ctx.closePath();
+        // ctx.clearRect(0, 0, canvas.width, canvas.heigth);
+        drawArrow();
+      }
+
+      setInterval(draw, 20);
+
+      function clear() {
+        draw();
+        reset();
+      }
+
+      function reset() {
+        canvas = document.getElementById("bubbleCanvas");
+        ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+   </script>
   </body>
 </html>
