@@ -10,6 +10,12 @@
   <body>
     <canvas class="bubbleCanvas" id="bubbleCanvas" ></canvas>
 
-
+    <script type="text/javascript">
+      let canvas = document.getElementById("bubbleCanvas");
+      let ctx = canvas.getContext("2d");
+      let newImage = new Image();
+      newImage.src = 'https://www.w3schools.com/howto/img_fjords.jpg';
+      ctx.drawImage(newImage, 0 ,0);
+    </script>
   </body>
 </html>
