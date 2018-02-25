@@ -1,3 +1,10 @@
+body {
+  background-image:url('../air-bubbles.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 #bubbleCanvas {
   background-image:url('../sunset.jpg');
   /* background: gray; */
@@ -8,4 +15,24 @@
 img {
   width: 50px;
   height: 50px;
+}
+
+.instructions {
+  position:absolute;
+  top:12px;
+  font-size: 14px;
+  background: lightblue;
+  border-radius: 10px;
+  left: 20px;
+  text-align: center;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.instructions-header {
+  font-size: 20px;
+}
+
+.win-header {
+  font-size: 20px;
 }
