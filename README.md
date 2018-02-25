@@ -2,6 +2,8 @@
 
 ### Overview
 
+[Live Site](https://edwardc148.github.io/Bubble-Stack/)
+
 Bubble stack is a personalized spin-off of the 1995 puzzle video game originally published by Nintendo. The goal is to match all the bubbles of the same colors in order to clear the board.
 
 ### Functionality
