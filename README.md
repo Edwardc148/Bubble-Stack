@@ -2,35 +2,28 @@
 
 ### Overview
 
-[Live Site](https://edwardc148.github.io/Bubble-Stack/)
+[Live Demo](https://edwardc148.github.io/Bubble-Stack/)
 
 Bubble stack is a personalized spin-off of the 1995 puzzle video game originally published by Nintendo. The goal is to match all the bubbles of the same colors in order to clear the board.
 
+### Technology
+
+This game is designed to demonstrate Object Oriented Programming in Javascript with the help of HTML 5 Canvas as well as a JavaScript bundler, Webpack.
+
 ### Functionality
+
+When Bubble Stack is initialized in the beginning, I make use of the asynchronous nature of JavaScript to put the game into a interval loop that is waiting for user inputs.
 
 Users will be able to shoot bubbles at varying angles in order to match bubbles of at least 3 lengths. The possible colors will be randomly generated and will adapt to varying stages of the game.
 
-Background music will be on continuous loop using an imported Howler.js
+### Features
 
-### MVP
 
-- [ ] Fully functional game with appropriate pattern matching
-- [ ] Audio background music with the ability to mute
-- [ ] Proper styling and bug free playability.
-- [ ] Score to keep track
 
-BONUS:
-- [ ] Keep track of previous scores (High scores)
+### Sample Code
 
-### Wireframes
-
-![Bubble Stack](https://github.com/Edwardc148/Markups/blob/master/Bubble%20Stack%20Wireframe.png)
-
-### Architecture
-
-- Vanilla Javascript
+- Javascript
 - HTML 5 Canvas
-- Howler
 
 ### Implementation Timeline
 
@@ -57,7 +50,7 @@ Day 4
 
 The most difficult portion of this project is going to be pattern matching as well as the ability to randomly generate the colors of the bubbles based on what is currently present on the play board screen.  
 
-### Bonus features
+### Future Direction
 
 - Multiplayer
 - Timed mode
