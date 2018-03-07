@@ -1,12 +1,19 @@
 body {
-  background-image:url('../air-bubbles.jpeg');
+  /* background-image:url('../air-bubbles.jpeg'); */
+  /* background-image:url('../bubbles_back.jpg');
+
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: linear-gradient(lightblue, blue);
+  background-attachment: fixed;
 }
 
 
 #bubbleCanvas {
-  background-image:url('../sunset.jpg');
+  /* background-image:url('../sunset.jpg'); */
+  background-image:url('../canvas_back.jpg');
+  background-size: cover;
+  /* background-repeat: no-repeat; */
   /* background: gray; */
   display: flex;
   margin: auto;

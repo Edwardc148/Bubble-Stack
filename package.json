@@ -4,6 +4,7 @@
   "description": "### Overview",
   "main": "webpack.config.js",
   "dependencies": {
+    "array-includes": "^3.0.3",
     "lodash": "^4.17.5"
   },
   "devDependencies": {},
