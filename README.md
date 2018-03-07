@@ -18,37 +18,74 @@ Users will be able to shoot bubbles at varying angles in order to match bubbles 
 
 ### Features
 
+1. The center portion of the game is implemented using Canvas that responds to user inputs with a key handler.
 
+![MainPage](https://github.com/Edwardc148/Markups/blob/master/Main%20Page%20Bubble.png)
 
 ### Sample Code
 
-- Javascript
-- HTML 5 Canvas
+- The most difficult portion of this project was color pattern matching using a self designed recursive algorithm.  When a bubble collides, it will detect its surrounding bubbles's colors within the hexagonal grid and then place each matched bubble into the recursion as well.
 
-### Implementation Timeline
+```javascript
+function recDiffAlgorithm(color, x, y, deepNum) {
+  if (currentStatus === 4) {
+    let ct = 0;
+    if (x%2 !== 0) {
+      for (var i = 0; i < diff.length; i++) {
+        let arr = diff[i];
+        let xDiff = arr[0];
+        let yDiff = arr[1];
+        if (x+xDiff < 0) {
+          continue;
+        }
+        if (y+yDiff < 0) {
+          continue;
+        }
+        let testBubble = allBubbles[x+xDiff][y+yDiff];
+        if (testBubble.color === color && testBubble.display === 1 && testBubble.match !== 1) {
+          testBubble.match = 1;
+          totalCount += 1;
+          ct += 1;
+            recDiffAlgorithm(color, x+xDiff, y+yDiff, deepNum+1);
+        }
+      }
+    }
+  }
+}
+```
 
-Over the weekend:
-- [ ] Finish the planning the project
-- [ ] Read on Howler.js
+- The direction the bubble is launched is based on the arrow angle.  This angle is calculated using a unit circle with the x coordinates (canvas.width/2-80*Math.cos(rad)) and the y coordinates (canvas.height-80*Math.sin(rad)).
 
-Day 1
-- [ ] Get the basic functionality of the game running
-- [ ] Webpack
-- [ ] Build bubble.js (which will hold the properties for the bubbles)
+```javascript
+function drawArrow() {
+  ctx.save();
+  if (aimLeft) {
+    if (degrees < 30) {
+      degrees = 30;
+    } else {
+      degrees -= 1;
+    }
+  } else if (aimRight) {
+    if (degrees > 150) {
+      degrees = 150;
+    } else {
+      degrees += 1;
+    }
+  }
 
-Day 2
-- [ ] Setup Howler
-- [ ] Bubble collisions
+  let rad = DegToRad(degrees);
 
-Day 3
-- [ ] Setup backend using node
-
-Day 4
-- [ ] Heavy CSS day to make everything appropriate and presentable
-
-### Difficulties
-
-The most difficult portion of this project is going to be pattern matching as well as the ability to randomly generate the colors of the bubbles based on what is currently present on the play board screen.  
+  ctx.beginPath();
+  let newX = (canvas.width/2-80*Math.cos(rad));
+  let newY = (canvas.height-80*Math.sin(rad));
+  ctx.moveTo(newX, newY);
+  ctx.lineTo(canvas.width/2, canvas.height);
+  ctx.strokeStyle = "white";
+  ctx.stroke();
+  ctx.closePath();
+  ctx.restore();
+}
+```
 
 ### Future Direction
 
