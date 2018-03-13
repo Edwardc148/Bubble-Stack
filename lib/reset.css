@@ -6,7 +6,7 @@ body {
 
 
 #bubbleCanvas {
-  background-image:url('../bd.png');
+  /* background-image:url('../bd.png'); */
   background-color: #131417;
   /* background-color: linear-gradient(lightblue, blue); */
   /* background-image:url('../canvas_back.jpg'); */
@@ -18,6 +18,7 @@ body {
   display: flex;
   margin: auto;
   opacity: 0.9;
+  border: 5px solid white;
 }
 
 img {
@@ -43,4 +44,10 @@ img {
 
 .win-header {
   font-size: 20px;
+}
+
+.mute {
+  position: absolute;
+  left: 20px;
+  top: 325px;
 }
