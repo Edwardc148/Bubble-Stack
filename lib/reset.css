@@ -1,14 +1,23 @@
 body {
-  background: linear-gradient(lightblue, blue);
+  /* background: linear-gradient(lightblue, blue); */
   background-attachment: fixed;
+  background-image:url('../566576.jpg');
 }
 
 
 #bubbleCanvas {
-  background-image:url('../canvas_back.jpg');
-  background-size: cover;
+  background-image:url('../bd.png');
+  background-color: #131417;
+  /* background-color: linear-gradient(lightblue, blue); */
+  /* background-image:url('../canvas_back.jpg'); */
+  background-position: -372px -105px;
+  background-size: 236% 125%;
+  background-repeat: no-repeat;
+  /* background-color: black; */
+  /* background-size: cover; */
   display: flex;
   margin: auto;
+  opacity: 0.9;
 }
 
 img {

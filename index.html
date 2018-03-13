@@ -35,10 +35,10 @@
       <p>You Win When All Bubbles Are Gone.
       </p>
     </div>
-    <audio autoplay="autoplay" loop="loop">
-      <source src="./bkgrd.mp3">
-
+    <audio id="player" autoplay="autoplay" src="./bkgrd.mp3" loop="loop">
     </audio>
-
+    <div>
+      <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button>
+    </div>
   </body>
 </html>
