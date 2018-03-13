@@ -30,12 +30,15 @@ img {
   position:absolute;
   top:12px;
   font-size: 14px;
-  background: lightblue;
-  border-radius: 10px;
+  /* background: lightblue; */
+  /* border-radius: 10px; */
+  box-shadow: 5px 5px #888888;
+  border: 1px solid white;
   left: 20px;
   text-align: center;
-  padding-left:5px;
-  padding-right:5px;
+  padding-left:10px;
+  padding-right:10px;
+  background: linear-gradient(to right, #1789af, #efd51e);
 }
 
 .instructions-header {
@@ -49,5 +52,15 @@ img {
 .mute {
   position: absolute;
   left: 20px;
-  top: 325px;
+  top: 340px;
+}
+
+.btn {
+  padding: 10px 12px 10px 12px;
+  border: 1px solid white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background:gray;
 }
