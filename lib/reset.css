@@ -8,14 +8,14 @@ body {
 
 #bubbleCanvas {
   /* background-image:url('../bd.png'); */
-  background-color: #131417;
   /* background-color: linear-gradient(lightblue, blue); */
   /* background-image:url('../canvas_back.jpg'); */
+  /* background-color: black; */
+  /* background-size: cover; */
+  background-color: #131417;
   background-position: -372px -105px;
   background-size: 236% 125%;
   background-repeat: no-repeat;
-  /* background-color: black; */
-  /* background-size: cover; */
   display: flex;
   margin: auto;
   opacity: 0.9;
@@ -28,11 +28,11 @@ img {
 }
 
 .instructions {
+  /* background: lightblue; */
+  /* border-radius: 10px; */
   position:absolute;
   top:12px;
   font-size: 14px;
-  /* background: lightblue; */
-  /* border-radius: 10px; */
   box-shadow: 5px 5px #888888;
   border: 1px solid white;
   left: 20px;
