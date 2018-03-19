@@ -20,7 +20,7 @@ Users will be able to shoot bubbles at varying angles in order to match bubbles 
 
 1. The center portion of the game is implemented using Canvas that responds to user inputs with a key handler.
 
-![MainPage](https://github.com/Edwardc148/Markups/blob/master/Main%20Page%20Bubble.png)
+![MainPage](https://github.com/Edwardc148/Markups/blob/master/current_bk.png)
 
 ### Sample Code
 
